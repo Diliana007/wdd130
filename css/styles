@@ -1,4 +1,4 @@
-/* ============== Global Resets ============== */
+/* ================= Global Reset & Base ================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +10,7 @@ body {
   color: #333;
 }
 
-/* ============== Header & Nav ============== */
+/* ================= Header & Nav ================= */
 nav {
   background: #f0f0f0;
   padding: 10px;
@@ -23,49 +23,49 @@ nav a {
   font-weight: bold;
 }
 
-/* ============== Page Title ============== */
+/* ================= Page Title ================= */
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
   margin: 20px 0;
 }
 
-/* ============== Main ============== */
+/* ================= Main ================= */
 main {
-  max-width: 800px;        
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
 }
 main img {
-  width: 200px;           
-  height: auto;
   display: block;
+  width: 200px;
+  height: auto;
   margin: 10px auto;
 }
 p {
-  padding: 0;              
+  padding: 0;
   margin-bottom: 1em;
 }
 
-/* ============== Aside ============== */
+/* ================= Aside ================= */
 aside {
-  width: 300px;           
+  width: 300px;
   margin: 20px auto;
   border: 1px solid #ccc;
   padding: 15px;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   color: #333;
 }
 aside img {
-  width: 200px;            
-  height: auto;
   display: block;
+  width: 200px;
+  height: auto;
   margin: 10px auto;
 }
 
-/* ============== Footer ============== */
+/* ================= Footer ================= */
 footer {
-  margin-top: 20px;        
+  margin-top: 20px;
   border-top: 1px solid #ccc;
   text-align: center;
   padding: 10px 0;
