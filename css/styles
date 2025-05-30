@@ -1,0 +1,72 @@
+/* ============== Global Resets ============== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* ============== Header & Nav ============== */
+nav {
+  background: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* ============== Page Title ============== */
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ============== Main ============== */
+main {
+  max-width: 800px;        
+  margin: 0 auto;
+  padding: 0 20px;
+}
+main img {
+  width: 200px;           
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+p {
+  padding: 0;              
+  margin-bottom: 1em;
+}
+
+/* ============== Aside ============== */
+aside {
+  width: 300px;           
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: #f9f9f9;
+  color: #333;
+}
+aside img {
+  width: 200px;            
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* ============== Footer ============== */
+footer {
+  margin-top: 20px;        
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 10px 0;
+}
