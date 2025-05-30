@@ -32,24 +32,24 @@ h1 {
 
 /* ================= Main ================= */
 main {
-  max-width: 800px;
+  max-width: 800px;     /* rubric: max-width on <main> */
   margin: 0 auto;
   padding: 0 20px;
 }
 main img {
   display: block;
-  width: 200px;
+  width: 200px;         /* rubric: main img rule */
   height: auto;
   margin: 10px auto;
 }
 p {
-  padding: 0;
+  padding: 0;           /* rubric: paragraph rule */
   margin-bottom: 1em;
 }
 
 /* ================= Aside ================= */
 aside {
-  width: 300px;
+  width: 300px;         /* rubric: aside rule */
   margin: 20px auto;
   border: 1px solid #ccc;
   padding: 15px;
@@ -58,14 +58,14 @@ aside {
 }
 aside img {
   display: block;
-  width: 200px;
+  width: 200px;         /* rubric: aside img rule */
   height: auto;
   margin: 10px auto;
 }
 
 /* ================= Footer ================= */
 footer {
-  margin-top: 20px;
+  margin-top: 20px;     /* rubric: footer rule */
   border-top: 1px solid #ccc;
   text-align: center;
   padding: 10px 0;
