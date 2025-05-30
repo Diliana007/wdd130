@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: sans-serif;
   line-height: 1.5;
@@ -16,6 +17,7 @@ nav {
   padding: 10px;
   text-align: center;
 }
+
 nav a {
   color: #333;
   text-decoration: none;
@@ -32,40 +34,43 @@ h1 {
 
 /* ================= Main ================= */
 main {
-  max-width: 800px;     /* rubric: max-width on <main> */
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 main img {
   display: block;
-  width: 200px;         /* rubric: main img rule */
+  width: 200px;
   height: auto;
   margin: 10px auto;
 }
+
 p {
-  padding: 0;           /* rubric: paragraph rule */
+  padding: 0;
   margin-bottom: 1em;
 }
 
 /* ================= Aside ================= */
 aside {
-  width: 300px;         /* rubric: aside rule */
+  max-width: 300px; /* Changed from width to max-width */
   margin: 20px auto;
   border: 1px solid #ccc;
   padding: 15px;
   background-color: #f9f9f9;
   color: #333;
 }
+
 aside img {
   display: block;
-  width: 200px;         /* rubric: aside img rule */
+  width: 200px;
   height: auto;
   margin: 10px auto;
 }
 
 /* ================= Footer ================= */
 footer {
-  margin-top: 20px;     /* rubric: footer rule */
+  margin-top: 20px;
   border-top: 1px solid #ccc;
   text-align: center;
   padding: 10px 0;
