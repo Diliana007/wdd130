@@ -2,15 +2,16 @@
 /* Base styles for White Water Rafting Site */
 
 :root {
-  --primary-color: #055a05;       /* forest green */
-  --secondary-color: #f4a261;       /* warm sand */
-  --accent1-color: #264653;         /* dark slate blue */
-  --accent2-color: #e9c46a;         /* light golden yellow */
-  --heading-font: 'Merriweather', serif;
+  --primary-color: #0066ff;       /* Bright blue */
+  --secondary-color: #ff6600;      /* Orange */
+  --accent1-color: #264653;        /* Dark slate blue */
+  --accent2-color: #e9c46a;        /* Light golden yellow */
+  --background-color: #f4f4f4;     /* Light gray */
+  --heading-font: 'Merriweather', serif; 
   --text-font: 'Roboto', sans-serif;
 }
 
-/* Reset margins, padding, and set box sizing */
+/* Reset margins, padding, and set box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -21,10 +22,7 @@
 body {
   font-family: var(--text-font);
   color: var(--accent1-color);
-  /* Overriding default margin & background settings */
-  margin: 0;
-  height: 100%;
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 /* Limit page width and center container */
@@ -59,10 +57,10 @@ nav a {
 /* Hero section: background image and overlays */
 .hero {
   position: relative;
-  margin: 2rem 0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hero img {
@@ -87,13 +85,13 @@ nav a {
 /* Hero article overlay */
 .hero article {
   position: absolute;
-  bottom: 40px;
-  right: 30px;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 1.5rem;
-  width: 300px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
 }
 
 .hero article img {
@@ -102,12 +100,10 @@ nav a {
   margin-left: 1rem;
   border-radius: 4px;
   border: 2px solid var(--accent1-color);
-  object-fit: cover;
 }
 
 /* Headings styling */
-h1,
-h2 {
+h1, h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
   margin: 16px 0;
@@ -147,18 +143,3 @@ footer p {
 .socialmedia img:hover {
   transform: scale(1.2);
 }
-
-img[Attributes Style] {
-  width: 199px;
-  aspect-ratio: auto 199 / 557;
-  height: 557px;
-  /* The aspect-ratio declaration is repeated as provided */
-  aspect-ratio: auto 199 / 557;
-}
-
-/* The following rule applies to all images */
-img {
-  background-color: hsl(0, 0%, 90%);
-  transition: background-color 300ms;
-}
-
