@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Splash White Water Rafting for inquiries, reservations, and adventure information.">
+  <meta name="author" content="Diliana Thompson">
+  <title>Contact Us - Splash White Water Rafting</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CSS Variables */
+    :root {
+      --primary-color: #396e94;
+      --secondary-color: #e7c24f;
+      --accent1-color: #a43312;
+      --accent2-color: #381d2a;
+      --heading-font: 'Merriweather', serif;
+      --paragraph-font: 'Roboto', sans-serif;
+      --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Base Styles */
+    body {
+      font-family: var(--paragraph-font);
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER STYLES */
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 20px;
+      background-color: var(--primary-color);
+      padding: 20px;
+      border-radius: 5px 5px 0 0;
+      box-shadow: var(--box-shadow);
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    .logo:hover {
+      transform: rotate(-5deg);
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--secondary-color);
+      color: var(--accent2-color);
+    }
+
+    /* MAIN CONTENT */
+    main {
+      margin: 40px auto;
+    }
+
+    .page-title {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      position: relative;
+    }
+
+    .page-title:after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: var(--secondary-color);
+      margin: 15px auto;
+    }
+
+    /* CONTACT SECTIONS */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-info {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: var(--box-shadow);
+    }
+
+    /* CONTACT INFO STYLES */
+    .contact-item {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    .contact-icon i {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .contact-details h3 {
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+
+    .contact-details p {
+      font-size: 1.1rem;
+    }
+
+    .map-container {
+      margin-top: 30px;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 300px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* EMPLOYEE SECTION */
+    .employees {
+      margin: 50px 0;
+    }
+
+    .employees h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .employee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .employee-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s;
+    }
+
+    .employee-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .employee-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .employee-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .employee-info h3 {
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+
+    .employee-info p {
+      color: var(--accent1-color);
+      font-weight: bold;
+    }
+
+    /* FORM STYLES */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      font-family: var(--paragraph-font);
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+    }
+
+    .radio-option input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .checkbox-group input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      background-color: var(--accent1-color);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .submit-btn:hover {
+      background-color: #8a2a0f;
+      transform: scale(1.05);
+    }
+
+    /* FOOTER STYLES */
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 30px;
+      border-radius: 5px 5px 0 0;
+      box-shadow: var(--box-shadow);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+    }
+
+    .socialmedia {
+      display: flex;
+      gap: 20px;
+    }
+
+    .socialmedia a {
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .socialmedia a:hover {
+      transform: translateY(-5px);
+    }
+
+    .socialmedia img {
+      width: 40px;
+      height: 40px;
+      filter: invert(1);
+      transition: transform 0.3s;
+    }
+
+    .socialmedia img:hover {
+      transform: scale(1.2);
+    }
+
+    .wireframe-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+      
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .page-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Splash White Water Rafting Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Contact Us</h1>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>Have questions about our rafting adventures? Contact us using the information below or fill out our contact form.</p>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Address</h3>
+            <p>123 Riverfront Drive<br>Rapid City, CO 81234</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Phone</h3>
+            <p>Reservations: (555) 123-4567<br>Office: (555) 765-4321</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <p>info@splashrafting.com<br>reservations@splashrafting.com</p>
+          </div>
+        </div>
+        
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101475.92698570666!2d-106.94374597140662!3d37.27520671149775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x873c0f7f3e6b9b8b%3A0x2d4d2c8b3b3b3b3b!2sArkansas%20River%2C%20Colorado!5e0!3m2!1sen!2sus!4v1689782345678!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Purpose of Message</label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input type="radio" id="general" name="purpose" value="general" required>
+                <label for="general">General Inquiry</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="reservation" name="purpose" value="reservation">
+                <label for="reservation">Reservation Question</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                <label for="suggestion">Website Suggestion</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          
+          <div class="checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+          </div>
+          
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="employees">
+      <h2>Meet Our Team</h2>
+      <div class="employee-grid">
+        <div class="employee-card">
+          <img src="images/employee1.jpg" alt="River Guide" class="employee-img">
+          <div class="employee-info">
+            <h3>Sarah Johnson</h3>
+            <p>Head River Guide</p>
+          </div>
+        </div>
+        
+        <div class="employee-card">
+          <img src="images/employee2.jpg" alt="Adventure Coordinator" class="employee-img">
+          <div class="employee-info">
+            <h3>Mike Rodriguez</h3>
+            <p>Adventure Coordinator</p>
+          </div>
+        </div>
+        
+        <div class="employee-card">
+          <img src="images/employee3.jpg" alt="Safety Officer" class="employee-img">
+          <div class="employee-info">
+            <h3>Emily Chen</h3>
+            <p>Safety Officer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Splash White Water Rafting Co. | Diliana Thompson</p>
+      <nav class="socialmedia">
+        <a href="https://facebook.com" target="_blank">
+          <img src="images/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="images/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="images/instagram.svg" alt="Instagram">
+        </a>
+      </nav>
+    </div>
+    <a href="contact-wireframe.jpg" class="wireframe-link">View Contact Page Wireframe</a>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Form validation
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      if (!name || !email || !message) {
+        alert('Please fill in all required fields');
+        return;
+      }
+      
+      // Simple email validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address');
+        return;
+      }
+      
+      // If validation passes, show success message
+      alert('Thank you for your message! We will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
