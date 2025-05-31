@@ -3,20 +3,337 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Splash White Water Rafting for inquiries, reservations, and adventure information.">
+  <meta name="description" content="About Splash White Water Rafting: Contact, history, and promotions for your adventure.">
   <meta name="author" content="Diliana Thompson">
-  <title>Contact Us - Splash White Water Rafting</title>
+  <title>About Us - Splash White Water Rafting</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   
-  <!-- CSS File -->
-  <link rel="stylesheet" href="styles/rafting.css">
-  
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* CSS Variables */
+    :root {
+      --primary-color: #396e94;
+      --secondary-color: #e7c24f;
+      --accent1-color: #a43312;
+      --accent2-color: #381d2a;
+      --heading-font: 'Merriweather', serif;
+      --paragraph-font: 'Roboto', sans-serif;
+      --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Base Styles */
+    body {
+      font-family: var(--paragraph-font);
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    /* HEADER STYLES */
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 20px;
+      background-color: var(--primary-color);
+      padding: 20px;
+      border-radius: 5px 5px 0 0;
+      box-shadow: var(--box-shadow);
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    .logo:hover {
+      transform: rotate(-5deg);
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--secondary-color);
+      color: var(--accent2-color);
+    }
+
+    /* MAIN CONTENT */
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      margin-bottom: 50px;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 800px;
+    }
+
+    /* HISTORY SECTION */
+    .history {
+      background-color: white;
+      padding: 40px;
+      margin-bottom: 50px;
+      border-radius: 5px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .history h2 {
+      color: var(--primary-color);
+      margin-bottom: 30px;
+      font-family: var(--heading-font);
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 3px solid var(--secondary-color);
+    }
+
+    .history-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .history-img {
+      width: 100%;
+      height: 300px;
+      border-radius: 5px;
+      object-fit: cover;
+      box-shadow: var(--box-shadow);
+    }
+
+    .history p {
+      font-size: 1.2rem;
+      text-align: justify;
+      line-height: 1.8;
+    }
+
+    /* ADVENTURES SECTION */
+    .adventure {
+      background-color: white;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 50px;
+    }
+
+    .adventure h2 {
+      color: var(--primary-color);
+      margin-bottom: 30px;
+      font-family: var(--heading-font);
+      text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 3px solid var(--secondary-color);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .adventure-figure {
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .adventure-figure:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* FOOTER STYLES */
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 30px;
+      border-radius: 5px 5px 0 0;
+      box-shadow: var(--box-shadow);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+    }
+
+    .socialmedia {
+      display: flex;
+      gap: 20px;
+    }
+
+    .socialmedia a {
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .socialmedia a:hover {
+      transform: translateY(-5px);
+    }
+
+    .socialmedia img {
+      width: 40px;
+      height: 40px;
+      filter: invert(1);
+      transition: transform 0.3s;
+    }
+
+    .socialmedia img:hover {
+      transform: scale(1.2);
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1100px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+      
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .history-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+      
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.2rem;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -26,128 +343,56 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="trips.html">Trips</a></li>
-        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <h1 class="page-title">Contact Us</h1>
-    
-    <div class="contact-container">
-      <div class="contact-info">
-        <h2>Get In Touch</h2>
-        <p>Have questions about our rafting adventures? Contact us using the information below or fill out our contact form.</p>
-        
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Address</h3>
-            <p>123 Riverfront Drive<br>Rapid City, CO 81234</p>
-          </div>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-phone"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Phone</h3>
-            <p>Reservations: (555) 123-4567<br>Office: (555) 765-4321</p>
-          </div>
-        </div>
-        
-        <div class="contact-item">
-          <div class="contact-icon">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div class="contact-details">
-            <h3>Email</h3>
-            <p>info@splashrafting.com<br>reservations@splashrafting.com</p>
-          </div>
-        </div>
-        
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101475.92698570666!2d-106.94374597140662!3d37.27520671149775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x873c0f7f3e6b9b8b%3A0x2d4d2c8b3b3b3b3b!2sArkansas%20River%2C%20Colorado!5e0!3m2!1sen!2sus!4v1689782345678!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-      
-      <div class="contact-form">
-        <h2>Send Us a Message</h2>
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label>Purpose of Message</label>
-            <div class="radio-group">
-              <div class="radio-option">
-                <input type="radio" id="general" name="purpose" value="general" required>
-                <label for="general">General Inquiry</label>
-              </div>
-              <div class="radio-option">
-                <input type="radio" id="reservation" name="purpose" value="reservation">
-                <label for="reservation">Reservation Question</label>
-              </div>
-              <div class="radio-option">
-                <input type="radio" id="suggestion" name="purpose" value="suggestion">
-                <label for="suggestion">Website Suggestion</label>
-              </div>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          
-          <div class="checkbox-group">
-            <input type="checkbox" id="newsletter" name="newsletter">
-            <label for="newsletter">Please subscribe me to the monthly newsletter</label>
-          </div>
-          
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+  <main>
+    <div class="hero">
+      <img src="images/hero.jpg" alt="Rafting Adventure in Action">
+      <div class="hero-content">
+        <h1>Splash White Water Rafting Co.</h1>
+        <p>Experience the thrill of nature's wildest rivers with expert guides</p>
       </div>
     </div>
-    
-    <div class="employees">
-      <h2>Meet Our Team</h2>
-      <div class="employee-grid">
-        <div class="employee-card">
-          <img src="images/employee1.jpg" alt="River Guide" class="employee-img">
-          <div class="employee-info">
-            <h3>Sarah Johnson</h3>
-            <p>Head River Guide</p>
-          </div>
-        </div>
-        
-        <div class="employee-card">
-          <img src="images/employee2.jpg" alt="Adventure Coordinator" class="employee-img">
-          <div class="employee-info">
-            <h3>Mike Rodriguez</h3>
-            <p>Adventure Coordinator</p>
-          </div>
-        </div>
-        
-        <div class="employee-card">
-          <img src="images/employee3.jpg" alt="Safety Officer" class="employee-img">
-          <div class="employee-info">
-            <h3>Emily Chen</h3>
-            <p>Safety Officer</p>
-          </div>
+
+    <section class="history">
+      <h2>Our History</h2>
+      <div class="history-content">
+        <img src="images/raft5.jpg" alt="Our Founding Team" class="history-img">
+        <div>
+          <p>Founded in 1999 by river enthusiast John Waters, Splash White Water Rafting Co. has grown from a single raft operation to one of the premier rafting companies in the region. What started as a passion project has transformed into a thriving business that has introduced over 50,000 adventurers to the thrill of white water rafting.</p>
+          <p>Our experienced guides have navigated rivers across three continents and bring that wealth of knowledge to every trip. We pride ourselves on our commitment to safety, environmental stewardship, and creating unforgettable experiences for our guests.</p>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="adventure">
+      <h2>Featured Adventures</h2>
+      <div class="gallery">
+        <figure class="adventure-figure">
+          <img src="images/raft1.jpg" alt="Colorado River Adventure">
+          <figcaption>Colorado River Run</figcaption>
+        </figure>
+        <figure class="adventure-figure">
+          <img src="images/raft2.jpg" alt="Bear River Rapids">
+          <figcaption>Bear River Rapids</figcaption>
+        </figure>
+        <figure class="adventure-figure">
+          <img src="images/raft3.jpg" alt="Smoky Mountain Challenge">
+          <figcaption>Smoky Mountain Challenge</figcaption>
+        </figure>
+        <figure class="adventure-figure">
+          <img src="images/raft4.jpg" alt="Wildwater Expedition">
+          <figcaption>Wildwater Expedition</figcaption>
+        </figure>
+        <figure class="adventure-figure">
+          <img src="images/raft5.jpg" alt="Thunder Canyon">
+          <figcaption>Thunder Canyon</figcaption>
+        </figure>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -165,34 +410,6 @@
         </a>
       </nav>
     </div>
-    <a href="contact-wireframe.jpg" class="wireframe-link" target="_blank">View Contact Page Wireframe</a>
   </footer>
-
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Form validation
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      
-      if (!name || !email || !message) {
-        alert('Please fill in all required fields');
-        return;
-      }
-      
-      // Simple email validation
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-      }
-      
-      // If validation passes, show success message
-      alert('Thank you for your message! We will get back to you soon.');
-      this.reset();
-    });
-  </script>
 </body>
 </html>
