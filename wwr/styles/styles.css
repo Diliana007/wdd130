@@ -1,25 +1,16 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience thrilling white water rafting adventures with Splash Rafting Co. Explore our trips and book your adventure today!">
-    <meta name="author" content="Diliana Thompson">
-    <title>Home | Splash Rafting Co.</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/rafting.css">
-    <style>
-        /* CSS Variables */
-        :root {
-            --primary-color: #396e94;
-            --secondary-color: #e7c24f;
-            --accent1-color: #a43312;
-            --accent2-color: #381d2a;
-            --light-color: #f8f9fa;
-            --dark-color: #212529;
-            --heading-font: 'Merriweather', serif;
-            --paragraph-font: 'Roboto', sans-serif;
-            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            --transition: all 0.3s ease;
-        }
+/* CSS Variables */
+:root {
+    --primary-color: #396e94;
+    --secondary-color: #e7c24f;
+    --accent1-color: #a43312;
+    --accent2-color: #381d2a;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --heading-font: 'Merriweather', serif;
+    --paragraph-font: 'Roboto', sans-serif;
+    --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
 
         /* Reset */
         * {
@@ -479,9 +470,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .section-title h2 {
-                font-size: 2rem;
-            }
+        .section-title h2 {
+            font-size: 2rem;
         }
-    </style>
-</head>
+    }
