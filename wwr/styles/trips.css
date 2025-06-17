@@ -1,0 +1,159 @@
+/* trips.css - Specific styles for trips page */
+
+/* TRIPS PAGE STYLES */
+.trips-hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero-trips.jpg') center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.trips-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+}
+
+.trips-hero-content p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.trips-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.trip-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.trip-detail:nth-child(even) .trip-image {
+  order: 2;
+}
+
+.trip-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  height: 400px;
+}
+
+.trip-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.trip-image:hover img {
+  transform: scale(1.05);
+}
+
+.trip-info h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.trip-features {
+  margin: 20px 0;
+}
+
+.trip-features li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trip-features li i {
+  color: var(--secondary-color);
+}
+
+/* TRIPS TABLE */
+.trips-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 40px 0;
+  box-shadow: var(--box-shadow);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.trips-table th, .trips-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.trips-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+.trips-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.trips-table tr:hover {
+  background-color: #e9ecef;
+}
+
+.table-highlight {
+  background-color: rgba(231, 194, 79, 0.2) !important;
+}
+
+/* CTA SECTION */
+.cta-section {
+  background: linear-gradient(rgba(57, 110, 148, 0.9), rgba(57, 110, 148, 0.9)), url('../images/rafting5.jpg') center/cover;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+}
+
+.cta-section p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .trip-detail {
+    grid-template-columns: 1fr;
+  }
+  
+  .trip-detail:nth-child(even) .trip-image {
+    order: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .trips-hero-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .trips-hero-content h1 {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,194 @@
+/* home.css - Specific styles for home page */
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 80vh;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 900px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  font-size: 1.2rem;
+  padding: 15px 40px;
+}
+
+/* FEATURED TRIPS */
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.trip-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.trip-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.trip-img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.trip-content {
+  padding: 25px;
+}
+
+.trip-content h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.trip-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.trip-difficulty {
+  color: var(--accent1-color);
+}
+
+.trip-price {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.newsletter h2 {
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+}
+
+.newsletter p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.newsletter-form .btn {
+  background-color: var(--secondary-color);
+  color: var(--accent2-color);
+}
+
+.newsletter-form .btn:hover {
+  background-color: #d1a93d;
+}
+
+/* CTA SECTION */
+.cta-section {
+  background: linear-gradient(rgba(57, 110, 148, 0.9), rgba(57, 110, 148, 0.9)), url('images/rafting4.jpg') center/cover;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+}
+
+.cta-section p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 70vh;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .trips-grid {
+    grid-template-columns: 1fr;
+  }
+}
